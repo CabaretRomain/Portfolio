@@ -21,6 +21,10 @@
 
 /* INIT CSS */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--main-font-color);
@@ -140,6 +144,7 @@ header nav .nav-right button {
 #home {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 85vh;
 }
 #home .about-container {
   margin-top: 50px;
@@ -149,6 +154,7 @@ header nav .nav-right button {
 
 #home .about-container h2 {
   font-size: 100px;
+  font-size: clamp(10px, 10vw, 100px);
 }
 #home .about-container p {
   margin-top: 20px;
@@ -231,6 +237,35 @@ header nav .nav-right button {
   width: 30px;
   height: 30px;
 }
+/* @media screen and (max-width: 1480px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-columns: 1fr;
+  }
+  .picture-container {
+    display: none !important;
+  }
+  .about-container {
+    text-align: center;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-columns: 1fr;
+  }
+  .picture-container {
+    display: none !important;
+  }
+  .about-container {
+    text-align: center;
+  }
+} */
 
 /* NUMBER COUNT */
 
@@ -245,6 +280,8 @@ header nav .nav-right button {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 105px;
+  margin-top: auto;
 
   .number-element {
     display: flex;
@@ -413,6 +450,16 @@ header nav .nav-right button {
   }
 }
 
+#internship {
+  height: 100vh;
+
+  .internship-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
 #veille {
   height: 100vh;
 
@@ -472,6 +519,7 @@ header nav .nav-right button {
             margin-top: 20px;
             margin-bottom: 10px;
             font-size: 20px;
+            font-size: clamp(2px, 2vw, 20px);
           }
 
           p {
